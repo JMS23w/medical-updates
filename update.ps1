@@ -72,5 +72,6 @@ Start-Process -FilePath $targetExe -WorkingDirectory $targetDir
 # Limpieza
 Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 
-Write-Host "OK: Actualización aplicada en ClickOnce cache."
+Write-Host "OK:Completado."
+
 
