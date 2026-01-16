@@ -29,9 +29,8 @@ if(-not $cands -or $cands.Count -eq 0){
 $targetExe = $cands[0].FullName
 $targetDir = Split-Path $targetExe -Parent
 
-Write-Host "Ruta detectada:"
-Write-Host "EXE =" $targetExe
-Write-Host "DIR =" $targetDir
+Write-Host "Direccion detectada:"
+
 
 # ====== 3) Backup ======
 $backup = Join-Path $targetDir ("backup_" + (Get-Date -Format "yyyyMMdd_HHmmss"))
@@ -74,3 +73,4 @@ Start-Process -FilePath $targetExe -WorkingDirectory $targetDir
 Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 
 Write-Host "OK: Actualización aplicada en ClickOnce cache."
+
